@@ -1,4 +1,4 @@
-![Vista previa del sitio](assets/preview.jpg)
+![Vista previa del sitio](assets/preview.png)
 
 # El Niño del Monte — Portafolio
 
