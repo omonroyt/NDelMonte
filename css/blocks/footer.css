@@ -1,0 +1,38 @@
+.footer {
+  padding: 22px 0;
+  border-top: 1px solid rgba(10, 15, 10, 0.1);
+  background: rgba(207, 239, 255, 0.55);
+  backdrop-filter: blur(10px);
+}
+
+.footer__grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  margin: 0;
+  color: rgba(10, 15, 10, 0.72);
+  font-weight: 700;
+}
+
+.dev {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.dev__label {
+  color: rgba(10, 15, 10, 0.62);
+  font-weight: 800;
+}
+.dev__name {
+  font-weight: 900;
+}
+.dev__links {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}

@@ -1,0 +1,35 @@
+.patreon__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding: 18px;
+  border-radius: var(--radius);
+  border: var(--stroke) solid rgba(10, 15, 10, 0.14);
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(178, 210, 97, 0.22),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 80% 60%,
+      rgba(20, 156, 17, 0.12),
+      transparent 60%
+    ),
+    rgba(255, 255, 255, 0.86);
+
+  box-shadow: var(--shadow);
+}
+
+.patreon__title {
+  margin: 0 0 6px;
+  letter-spacing: -0.04em;
+}
+.patreon__desc {
+  margin: 0;
+  color: var(--muted);
+  max-width: 70ch;
+}

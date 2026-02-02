@@ -1,0 +1,12 @@
+.u-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.u-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.7s var(--ease),
+    transform 0.7s var(--ease);
+}

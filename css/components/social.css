@@ -1,0 +1,44 @@
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.social {
+  width: 48px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+
+  border-radius: 16px;
+  border: var(--stroke) solid rgba(10, 15, 10, 0.14);
+  background: rgba(20, 156, 17, 0.06);
+  box-shadow: 0 12px 22px rgba(10, 15, 10, 0.08);
+
+  transition:
+    transform 0.15s var(--ease),
+    background 0.2s var(--ease);
+}
+
+.social:hover {
+  transform: translateY(-2px);
+  background: rgba(178, 210, 97, 0.22);
+}
+
+.social svg {
+  width: 20px;
+  height: 20px;
+  color: rgba(10, 15, 10, 0.82);
+}
+
+.social--small {
+  width: 42px;
+  height: 38px;
+  border-radius: 14px;
+}
+
+.social--small svg {
+  width: 18px;
+  height: 18px;
+}

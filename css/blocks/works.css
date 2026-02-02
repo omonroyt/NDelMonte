@@ -1,0 +1,132 @@
+.works__grid {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.works__stack {
+  display: grid;
+  gap: 14px;
+}
+
+/* work-card (bloque) */
+.work-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 14px;
+
+  padding: 14px;
+  border-radius: var(--radius);
+  border: var(--stroke) solid rgba(10, 15, 10, 0.14);
+  background: var(--card);
+  box-shadow: var(--shadow-soft);
+
+  cursor: pointer;
+  transition:
+    transform 0.18s var(--ease),
+    background 0.18s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.work-card:hover {
+  transform: translateY(-3px);
+  background: rgba(178, 210, 97, 0.12);
+}
+
+.work-card--active {
+  background: rgba(20, 156, 17, 0.1);
+  border-color: rgba(20, 156, 17, 0.28);
+}
+
+.work-card__thumb {
+  border-radius: 18px;
+  border: var(--stroke-soft) solid rgba(10, 15, 10, 0.12);
+  box-shadow: 0 14px 30px rgba(10, 15, 10, 0.08);
+  overflow: hidden;
+  background: rgba(178, 210, 97, 0.12);
+}
+
+.work-card__title {
+  margin: 2px 0 6px;
+  letter-spacing: -0.02em;
+}
+.work-card__desc {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* detalle (bloque) */
+.detail-card {
+  padding: 18px;
+  border-radius: var(--radius);
+  border: var(--stroke) solid rgba(10, 15, 10, 0.14);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 104px;
+}
+
+.detail-card__kicker {
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  margin: 0 0 10px;
+}
+
+.detail-card__title {
+  margin: 0 0 10px;
+  letter-spacing: -0.03em;
+}
+.detail-card__text {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+.detail-card__bullets {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(10, 15, 10, 0.78);
+  display: grid;
+  gap: 8px;
+}
+
+.detail-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* floaty como modificador del work-card */
+.work-card--floaty {
+  animation: floaty 5.5s var(--ease) infinite alternate;
+}
+.works__stack .work-card:nth-child(2) {
+  animation-duration: 6.5s;
+}
+.works__stack .work-card:nth-child(3) {
+  animation-duration: 7.2s;
+}
+
+@keyframes floaty {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 920px) {
+  .works__grid {
+    grid-template-columns: 1fr;
+  }
+  .detail-card {
+    position: relative;
+    top: auto;
+  }
+}

@@ -1,0 +1,129 @@
+.gallery__shell {
+  display: grid;
+  grid-template-columns: 56px 1fr 56px;
+  gap: 14px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.gallery__btn {
+  height: 56px;
+  width: 56px;
+  border-radius: 18px;
+  border: var(--stroke) solid rgba(10, 15, 10, 0.14);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+
+  font-weight: 900;
+  font-size: 1.2rem;
+  transition: transform 0.15s var(--ease);
+}
+
+.gallery__btn:hover {
+  transform: translateY(-2px);
+}
+.gallery__btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.gallery__stage {
+  position: relative;
+  height: 640px;
+
+  border-radius: var(--radius);
+  border: var(--stroke) solid rgba(10, 15, 10, 0.14);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+/* gallery-card (bloque) */
+.gallery-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  width: clamp(280px, 40vw, 480px);
+  height: auto;
+  aspect-ratio: 3 / 4;
+
+  border-radius: 26px;
+  border: var(--stroke) solid rgba(10, 15, 10, 0.14);
+  box-shadow: 0 26px 60px rgba(10, 15, 10, 0.14);
+  background: #fff;
+
+  transform: translate(-50%, -50%);
+  user-select: none;
+  overflow: hidden;
+  cursor: grab;
+  will-change: transform;
+  transition:
+    box-shadow 220ms var(--ease),
+    filter 220ms var(--ease);
+}
+
+.gallery-card:active {
+  cursor: grabbing;
+}
+
+.gallery-card__art {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.gallery-card__label {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 1;
+
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  color: rgba(10, 15, 10, 0.82);
+
+  border: var(--stroke-soft) solid rgba(10, 15, 10, 0.14);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 14px 30px rgba(10, 15, 10, 0.1);
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+.gallery__hint {
+  margin-top: 10px;
+  color: rgba(10, 15, 10, 0.65);
+  font-weight: 700;
+}
+
+@media (max-width: 920px) {
+  .gallery__stage {
+    height: 400px;
+  }
+}
+
+@media (max-width: 560px) {
+  .gallery__shell {
+    grid-template-columns: 46px 1fr 46px;
+  }
+  .gallery__btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+  }
+  .gallery__stage {
+    height: 400px;
+  }
+}

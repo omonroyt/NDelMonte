@@ -1,0 +1,18 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 12px;
+  border-radius: 999px;
+
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.55);
+  border: var(--stroke-soft) dashed rgba(20, 156, 17, 0.35);
+
+  font-weight: 800;
+  font-size: 0.88rem;
+  color: rgba(10, 15, 10, 0.78);
+
+  backdrop-filter: blur(6px);
+}

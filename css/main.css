@@ -1,0 +1,23 @@
+@import url("./base/variables.css");
+@import url("./base/reset.css");
+@import url("./base/utilities.css");
+
+@import url("./layout/layout.css");
+
+@import url("./components/button.css");
+@import url("./components/chip.css");
+@import url("./components/social.css");
+@import url("./components/burger.css");
+
+@import url("./blocks/sky.css");
+@import url("./blocks/header.css");
+@import url("./blocks/section.css");
+@import url("./blocks/hero.css");
+@import url("./blocks/works.css");
+@import url("./blocks/gallery.css");
+@import url("./blocks/products.css");
+@import url("./blocks/about.css");
+@import url("./blocks/patreon.css");
+@import url("./blocks/contact.css");
+@import url("./blocks/footer.css");
+@import url("./blocks/reveal.css");

@@ -1,0 +1,15 @@
+.l-container {
+  width: min(var(--maxw), calc(100% - 2.2rem));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 72px 0;
+  position: relative;
+}
+
+@media (max-width: 920px) {
+  body {
+    padding-top: 82px;
+  }
+}
